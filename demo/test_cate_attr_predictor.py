@@ -22,13 +22,13 @@ def parse_args():
         '--checkpoint',
         type=str,
         help='checkpoint file',
-        default='checkpoint/CateAttrPredict/resnet/global/epoch_40.pth')
+        default='fine.pth')
     parser.add_argument(
         '--config',
         help='test config file path',
-        default='configs/category_attribute_predict/global_predictor_resnet.py')
+        default='../configs/category_attribute_predict/global_predictor_resnet.py')
     parser.add_argument(
-        '--use_cuda', type=bool, default=True, help='use gpu or not')
+        '--use_cuda', type=bool, default=False, help='use gpu or not')
     args = parser.parse_args()
     return args
 
